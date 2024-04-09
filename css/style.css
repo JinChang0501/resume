@@ -1,0 +1,878 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+/* font-family: 'Mukta', sans-serif; */
+/* 電腦與平板上應用的樣式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(237, 237, 237);
+    margin: 0px;
+    font-size: 14px;
+    font-family: 'Mukta', sans-serif;
+}
+
+.header {
+    background: #ffffff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    border-bottom: 1px solid darkgray;
+
+}
+
+.logo {
+    width: 100px;
+    background-color: brown;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo>a {
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+
+    display: block;
+}
+
+.navbar>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.navbar>ul>li {
+    /* background-color: palegoldenrod; */
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar>ul>li>a {
+    display: block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    /* background-color: aqua; */
+    /*這個屬性讓它置中*/
+    margin: auto;
+    justify-content: center;
+
+}
+
+ol {
+    list-style: none;
+}
+
+.ol3 li {
+    background-color: rgb(0, 255, 98);
+    border: 1px solid gray;
+
+}
+
+
+
+/* whitespace */
+.whitespace {
+    position: relative;
+    /* border: 1px solid black; */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+
+
+.title {
+    position: absolute;
+    z-index: 5;
+}
+
+.title h2 {
+    font-size: 36px;
+}
+
+.title p {
+    font-size: 20px;
+}
+
+/* cubes */
+.cube {
+    position: absolute;
+    top: 100px;
+    right: 120px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f28a82;
+    animation: slide 5s ease-in infinite alternate;
+}
+
+/* @keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(200px);
+    }
+} */
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(100px) rotate(360deg);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    75% {
+        transform: translateX(-100px)rotate(360deg);
+    }
+}
+
+.triangle {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 225px 389.7px 225px;
+    border-color: transparent transparent #82beff transparent;
+    animation: spin 10s ease-in infinite alternate;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle {
+    position: absolute;
+    top: 250px;
+    right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #82bef2;
+    animation: myAnim 2s ease-in infinite alternate;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 50%;
+    border: 10px solid orange;
+    z-index: 4;
+}
+
+@keyframes myAnim {
+    0% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+        transform-origin: center center;
+    }
+
+    10% {
+        animation-timing-function: ease-in;
+        transform: scale(0.91);
+    }
+
+    17% {
+        animation-timing-function: ease-out;
+        transform: scale(0.98);
+    }
+
+    33% {
+        animation-timing-function: ease-in;
+        transform: scale(0.87);
+    }
+
+    45% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+}
+
+.rectangle {
+    position: absolute;
+    top: 50px;
+    right: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #82bef2;
+
+    width: 100px;
+    height: 150px;
+    background-color: rgb(237, 237, 237);
+    border: 10px solid rgb(97, 236, 171);
+    border-radius: 20px;
+    /* transform: rotate(45deg); */
+    animation: heartbeat 2s ease-in infinite alternate;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale3d(1, 1, 1) rotate(45deg);
+        ;
+    }
+
+    30% {
+        transform: scale3d(0.75, 1.25, 1) rotate(45deg);
+    }
+
+    40% {
+        transform: scale3d(1.25, 0.75, 1) rotate(45deg);
+    }
+
+    50% {
+        transform: scale3d(0.85, 1.15, 1) rotate(45deg);
+    }
+
+    65% {
+        transform: scale3d(1.05, 0.95, 1) rotate(45deg);
+    }
+
+    75% {
+        transform: scale3d(0.95, 1.05, 1) rotate(45deg);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1) rotate(45deg);
+    }
+}
+
+/* 追求美感與效能的全端工程師區塊 */
+.sec1 {
+    background-color: rgb(237, 237, 237);
+    /* background-color: #8b0f9f; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    /* 讓三角形不會顯示到區塊上 */
+    position: relative;
+    z-index: 3;
+}
+
+.photo {
+    width: 40%;
+    height: auto;
+    /* background-color: #cfeb12; */
+    margin-right: 10%;
+}
+
+.photo img {
+    max-width: 100%;
+    box-shadow: -15px 15px 0px rgb(226, 162, 238);
+}
+
+.description {
+    width: 50%;
+    height: auto;
+
+    /* background-color: #8b0f9f; */
+}
+
+.description h3 {
+    font-weight: 500;
+    font-size: 2rem;
+    text-shadow: 0 0 5px white;
+    margin-bottom: 20px;
+    /* 讓圓形顯示到區塊上 */
+    position: relative;
+    z-index: 5;
+    text-shadow: 3px 3px 3px #ababab;
+}
+
+.description p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.description ol {
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+    padding: 20px;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+
+}
+
+.description ol h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.skillcard {
+    width: 100%;
+    background: linear-gradient(#333, dimgray);
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* .skillcard h2 {
+    text-transform: uppercase;
+    text-align: center;
+} */
+
+.skillcard .skill {
+    height: 50px;
+}
+
+.skillcard .skill:hover {
+    background-color: #267b8a;
+}
+
+.skillcard .skill span {
+    display: block;
+}
+
+.skillcard .skill .level {
+    text-align: right;
+    transform: translateY(-1em);
+    position: relative;
+}
+
+.skillcard .skill .level::after {
+    content: '';
+    position: absolute;
+    top: 1.2em;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid mediumspringgreen;
+    border-radius: 0.2em;
+    background-image: linear-gradient(to right, mediumspringgreen, mediumspringgreen);
+    background-repeat: no-repeat;
+    background-position: top 1px left 1px;
+}
+
+.skillcard .skill.html .level::after {
+    background-size: 90% 1em;
+}
+
+.skillcard .skill.css .level::after {
+    background-size: 95% 1em;
+}
+
+.skillcard .skill.javascript .level::after {
+    background-size: 80% 1em;
+}
+
+.skillcard .skill.svg .level::after {
+    background-size: 85% 1em;
+}
+
+.skillcard .skill.canvas .level::after {
+    background-size: 25% 1em;
+}
+
+.sec2 {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+/* 工作經歷 */
+.container2 {
+    width: 80%;
+    margin: auto;
+}
+
+.container2 h2 {
+    display: flex;
+    /* justify-content: center; */
+    font-size: 36px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.des {
+    display: flex;
+    font-weight: 800;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.date {
+    font-size: 18px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.des p {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.company-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 50px;
+}
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+
+
+/* Portolio */
+.Portfolio {
+    background-color: lightyellow;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Portfolio h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container3 {
+    height: 700px;
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0 auto 100px auto;
+    gap: .625rem;
+    justify-content: center;
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+
+}
+
+
+
+.side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+}
+
+.side img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.back {
+    display: flex;
+    background: #c1a27a;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
+}
+
+.fontw {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff;
+}
+
+
+.card:hover .side {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(0deg);
+}
+
+.item4 {
+    grid-area: 1/3/2/5;
+}
+
+.item6 {
+    grid-area: 2/2/4/4;
+}
+
+.item10 {
+    grid-area: 3/4/4/6;
+}
+
+/* . container3 .card:nth-child(3) img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:nth-child(9) img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card:nth-child(11) img {
+    height: 200px;
+    object-fit: cover;
+} */
+
+.card:hover .team-background {
+    opacity: 1;
+    /* 鼠标悬停时显示背景图片 */
+}
+
+.container3 .card:nth-child(1) .back {
+    background-image: url('../imgs/golden_state.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3 .card:nth-child(2) .back {
+    background-image: url('../imgs/suns.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3 .card:nth-child(3) .back {
+    background-image: url('../imgs/dallas.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3 .card:nth-child(4) .back {
+    background-image: url('../imgs/76ers.jpg');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3 .card:nth-child(5) .back {
+    background-image: url('../imgs/bulls.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3 .card:nth-child(6) .back {
+    background-image: url('../imgs/LA.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3 .card:nth-child(7) .back {
+    background-image: url('../imgs/LA.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3 .card:nth-child(8) .back {
+    background-image: url('../imgs/dallas.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3 .card:nth-child(9) .back {
+    background-image: url('../imgs/bulls.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3 .card:nth-child(10) .back {
+    background-image: url('../imgs/LA2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Contact區塊 */
+.s1 h2 {
+    text-shadow: 3px 3px 5px lightgray;
+    font-size: 32px;
+}
+
+.s1 p {
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.s1 ol li {
+    color: white;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+#Contact {
+    background-image: linear-gradient(to left bottom, #e72121, #ee004b, #e90073, #d6009b, #b32ebe, #a651d1, #9969e0, #8d7eeb, #ab9df1, #c7bdf7, #e3defb, #ffffff);
+    padding: 80px 0;
+
+}
+
+.column2 {
+    width: 100%;
+    /* background-color: #8b0f9f; */
+    display: flex;
+}
+
+.w-50 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#ContactForm {
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px #333;
+    background-color: white;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 18px;
+}
+
+input[type="text"]:focus {
+    outline: 2px solid black;
+}
+
+.btn-confirm {
+    background-image: linear-gradient(to right, #ffa600, #f7b800, #edc900, #e0da00, #cfeb12);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    box-shadow: 0 0 5px lightgray;
+    float: right;
+
+}
+
+/* 手機 */
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sec1 {
+        width: 100%;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    .menu-icon {
+        display: block;
+        background: #8b0f9f;
+        padding: 5px;
+        display: flex;
+        color: #fff;
+        font-family: 'Dosis';
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar>ul {
+        flex-direction: column;
+    }
+
+    .navbar>ul>li {
+        display: block;
+        background-color: rgb(238, 188, 96);
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #333;
+        flex: 1 1 0%;
+    }
+
+    .ol1 {
+        flex-direction: column;
+    }
+
+    .photo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .column2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .w-50 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #ContactForm {
+        margin-top: 30px;
+        width: 80%;
+    }
+
+    /* Cubes */
+    /* cubes */
+    .cube {
+        position: absolute;
+        top: 100px;
+        right: 120px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .triangle {
+        position: absolute;
+        left: 50px;
+        top: 150px;
+        border-width: 0 60px 103.9px 60px;
+    }
+
+    .circle {
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+        background-color: #82bef2;
+        animation: myAnim 5s ease-in infinite alternate;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(237, 237, 237);
+        border-radius: 50%;
+        border: 10px solid orange;
+    }
+
+    .rectangle {
+        position: absolute;
+        top: 65%;
+        right: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #82bef2;
+        width: 80px;
+        height: 120px;
+        background-color: rgb(237, 237, 237);
+        border: 3px solid rgb(97, 236, 171);
+        border-radius: 20px;
+        /* transform: rotate(45deg); */
+        animation: heartbeat 2s ease-in infinite alternate;
+    }
+
+    .Portfolio .container3 {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 46%;
+        height: 200px;
+        max-height: 100%;
+    }
+
+    .container3 .card:nth-child(10) .back {
+        background-image: url('../imgs/LA.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .title {
+        position: relative;
+        top: 10%;
+    }
+
+
+}
